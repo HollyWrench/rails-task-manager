@@ -7,9 +7,10 @@
   <% unless @task.new_record? %>
     <%= f.label :completed %>
     <%= f.check_box :completed, {}, 'Yes', 'No' %>
+  <%# so unless it is creating a new record, it will be an edit and therefore require the checkbox %>
   <% end %>
   <%# REMEMBER YOU CAN USE ANY RUBY CODE - INCLUDING IF/UNLESS STATEMENTS ^^ %>
-  <%= f.submit %>
+  <%= f.submit %> <%# button  %>
 <% end %>
 
 <%= link_to 'Return to task list', tasks_path  %>
